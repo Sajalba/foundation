@@ -1,0 +1,71 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saj</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+</head>
+
+<body>
+    
+        {% include 'header.html'%}
+       <div class="bgimg"">
+        <div class="container text-center text-danger headerset">
+            <h2>Welcome To Our Page!</h2>
+            <h1>IT'S NICE TO MEET YOU</h1>
+        </div>
+    </div>
+
+    <section class="container text-center ourservices">
+        <h1>SERVICES</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur </p>
+        <div class="row rowsetting">
+            <div class="col-lg-4 col-md-4 col-sm-10 col-10 d-block m-auto ">
+                <a href="/services"><div class="imgsetting d-block m-auto bg-warning" ><i class="fas fa-desktop fa-3x text-white"></i></div>
+                <h2 class=" text-dark">VIDEO LECTURES</h2></a>
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, vel eaque, explicabo itaque, veniam
+                    at quasi distinctio adipisci quas ab soluta recusandae consectetur </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-10 col-sm-10 d-block m-auto">
+                <a href="/services"><div class="imgsetting d-block m-auto bg-warning"><i class="far fa-file-pdf fa-3x text-white"></i>
+                </div>
+                <h2 class=" text-dark">PDF</h2></a>
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, vel eaque, explicabo itaque, veniam
+                    at quasi distinctio adipisci quas ab soluta recusandae consectetur </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team bg-light">
+        <div class="container-fluid text-center">
+            <h1>TEAM</h1>
+            <p>Developers</p>
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-12 d-block m-auto">
+                    <figure class="figure">
+                        <img src="{% static 'image/sajal.jpg' %}" alt="" class="figure-img img-fluid rounded-circle" width="200px">
+                        <figcaption>
+                            <h4>SAJAL BANSAL</h4>
+                            <p class="figure-caption">Full Stack Developer</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

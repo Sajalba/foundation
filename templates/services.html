@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    
+
+</head>
+
+<body>
+    {% include 'header.html'%}
+    <div class="container-fluid sc bg-light">
+        <h1 class="text-center text-danger">SERVICES</h1>
+
+        <div class="container sc-bg m-auto">
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 1</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class="display-flex">
+                        <th class="col-1">SR. NO.</th>
+                        <th class="col-9">SUBJECT NAME</th>
+                        <th class="col-1">PDF</th>
+                        <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for cl1 in class1 %}
+                   <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl1.subjectname}}</td>
+                        <td><a href="{{cl1.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/1/{{cl1.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 2</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class="display-flex  ">
+                        <th class="col-1">SR. NO.</th>
+                        <th class="col-9">SUBJECT NAME</th>
+                        <th class="col-1">PDF</th>
+                        <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl2 in class2 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl2.subjectname}}</td>
+                        <td><a href="{{cl2.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/2/{{cl2.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 3</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class="display-flex">
+                        <th class="col-1">SR. NO.</th>
+                        <th class="col-9">SUBJECT NAME</th>
+                        <th class="col-1">PDF</th>
+                        <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl3 in class3 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl3.subjectname}}</td>
+                        <td><a href="{{cl3.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/3/{{cl3.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 4</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl4 in class4 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl4.subjectname}}</td>
+                        <td><a href="{{cl4.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/4/{{cl4.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 5</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl5 in class5 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl5.subjectname}}</td>
+                        <td><a href="{{cl5.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/5/{{cl5.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 6</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl6 in class6 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl6.subjectname}}</td>
+                        <td><a href="{{cl6.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/6/{{cl6.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 7</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1 text-center">PDF</th>
+                    <th class="col-1 text-center">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl7 in class7 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl7.subjectname}}</td>
+                        <td><a href="{{cl7.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/7/{{cl7.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 8</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl8 in class8 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl8.subjectname}}</td>
+                        <td><a href="{{cl8.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/8/{{cl8.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 9</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl9 in class9 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl9.subjectname}}</td>
+                        <td><a href="{{cl9.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/9/{{cl9.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 10</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl10 in class10 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl10.subjectname}}</td>
+                        <td><a href="{{cl10.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/10/{{cl10.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 11</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl11 in class11 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl11.subjectname}}</td>
+                        <td><a href="{{cl11.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/11/{{cl11.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="row text-primary">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>Class 12</h4>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="thead-dark text-light">
+                    <tr class=" display-flex">
+                    <th class="col-1">SR. NO.</th>
+                    <th class="col-9">SUBJECT NAME</th>
+                    <th class="col-1">PDF</th>
+                    <th class="col-1">VIDEO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cl12 in class12 %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{cl12.subjectname}}</td>
+                        <td><a href="{{cl12.pdf.url}}" target="_blank"><i class="fas fa-file-pdf fa-1x m-auto"></i></a></td>
+                        <td><a href="../video/12/{{cl12.subjectname}}"><i class="fas fa-play fa-1x"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>
